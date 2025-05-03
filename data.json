@@ -1,0 +1,147 @@
+[
+  {
+    "id": "rlcycle",
+    "name": "RL Cycle",
+    "ville": "St Georges des Groseillers",
+    "services": [
+      "réparation",
+      "entretien",
+      "bosch"
+    ],
+    "lat": 48.764,
+    "lng": -0.598,
+    "email": "contact@rlcycle.com",
+    "type": "reparateur",
+    "logo": "rlcycle-logo.jpg",
+    "photo": "rlcycle-facade.webp"
+  },
+  {
+    "id": "sportvelo14",
+    "name": "Sport Vélo 14",
+    "ville": "Vire",
+    "services": [
+      "réparation",
+      "location"
+    ],
+    "lat": 48.839,
+    "lng": -0.888,
+    "email": "info@sportvelo14.fr",
+    "type": "reparateur"
+  },
+  {
+    "id": "intercycle-flers",
+    "name": "Intercycle Flers",
+    "ville": "Flers",
+    "services": [
+      "réparation",
+      "entretien"
+    ],
+    "lat": 48.742,
+    "lng": -0.567,
+    "email": "flers@intercycle.fr",
+    "type": "reparateur"
+  },
+  {
+    "id": "intercycle-mondeville",
+    "name": "Intercycle Mondeville",
+    "ville": "Mondeville",
+    "services": [
+      "réparation",
+      "entretien"
+    ],
+    "lat": 49.173,
+    "lng": -0.326,
+    "email": "mondeville@intercycle.fr",
+    "type": "reparateur"
+  },
+  {
+    "id": "intercycle-alencon",
+    "name": "Intercycle Alençon",
+    "ville": "Alençon",
+    "services": [
+      "réparation",
+      "entretien"
+    ],
+    "lat": 48.434,
+    "lng": 0.084,
+    "email": "alencon@intercycle.fr",
+    "type": "reparateur"
+  },
+  {
+    "id": "bikeandrun",
+    "name": "Bike&Run",
+    "ville": "Vire",
+    "services": [
+      "réparation",
+      "entretien"
+    ],
+    "lat": 48.838,
+    "lng": -0.891,
+    "email": "contact@bikeandrun.fr",
+    "type": "reparateur"
+  },
+  {
+    "id": "abcyclette",
+    "name": "ABCyclette",
+    "ville": "Caen",
+    "services": [
+      "réparation",
+      "location"
+    ],
+    "lat": 49.182,
+    "lng": -0.37,
+    "email": "contact@abcyclette.fr",
+    "type": "reparateur"
+  },
+  {
+    "id": "caisseavelo",
+    "name": "La Caisse à Vélo",
+    "ville": "Domfront",
+    "services": [
+      "réparation itinérante",
+      "entretien"
+    ],
+    "lat": 48.589,
+    "lng": -0.649,
+    "email": "lacaisseavelo@gmail.com",
+    "type": "reparateur"
+  },
+  {
+    "id": "tendancevelo",
+    "name": "Tendance Vélo",
+    "ville": "Argentan",
+    "services": [
+      "réparation"
+    ],
+    "lat": 48.745,
+    "lng": -0.02,
+    "email": "info@tendancevelo.fr",
+    "type": "reparateur"
+  },
+  {
+    "id": "velorne",
+    "name": "Vél'orne",
+    "ville": "L'Aigle",
+    "services": [
+      "location",
+      "réparation"
+    ],
+    "lat": 48.766,
+    "lng": 0.63,
+    "email": "contact@velorne.fr",
+    "type": "reparateur"
+  },
+  {
+    "id": "normandiecycle",
+    "name": "Normandie Cycle",
+    "ville": "Condé-en-Normandie",
+    "services": [
+      "réparation",
+      "VAE"
+    ],
+    "lat": 48.891,
+    "lng": -0.555,
+    "email": "contact@normandiecycle.fr",
+    "type": "reparateur"
+  }
+]
