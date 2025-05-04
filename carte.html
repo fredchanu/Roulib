@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roulib - Carte</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="roulib-icon.png" type="image/png">
+  <meta name="theme-color" content="#2A9D8F">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="carte.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+<body>
+    <header class="map-header">
+        <div style="position: relative; height: 40px;">
+      <a href="index.html" class="back-button" style="position: absolute; top: 0; left: 0; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background-color: #2A9D8F; border-radius: 50%; text-decoration: none;">
+        <span style="color: white; font-size: 1.4rem;">←</span>
+      </a>
+    </div>
+    <h1 style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 1.5rem; color: var(--green); margin-top: 1rem;">Carte interactive</h1>
+
+    <form class="search-form" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 1rem;">
+      <input type="text" name="query" placeholder="Ville ou code postal" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 6px; width: 180px;" />
+      <select name="radius" style="padding: 0.5rem; border-radius: 6px; border: 1px solid #ccc;">
+        <option value="5">5 km</option>
+        <option value="10">10 km</option>
+        <option value="20">20 km</option>
+      </select>
+      <button type="submit" style="background-color: var(--green); color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer;">Rechercher</button>
+    </form>
+
+    <div class="filters">
+      <button data-filter="all">Tous</button>
+      <button data-filter="repair">Réparateurs</button>
+      <button data-filter="club">Clubs</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="map" class="map-container"></div>
+  </main>
+
+  <div class="profiles" style="padding: 1rem;"></div>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-link">
+      <img src="icon-home.svg" alt="Accueil" class="icon-img">
+      <span class="label">Accueil</span>
+    </a>
+    <a href="carte.html" class="nav-link">
+      <img src="icon-map.svg" alt="Carte" class="icon-img">
+      <span class="label">Carte</span>
+    </a>
+    <a href="#" class="nav-link">
+      <img src="icon-profile.svg" alt="Profil" class="icon-img">
+      <span class="label">Profil</span>
+    </a>
+  </nav>
+
+  <script src="carte.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('Service Worker enregistré'))
+        .catch(err => console.error('Erreur Service Worker :', err));
+    }
+  </script>
+  
+</body>
+</html>

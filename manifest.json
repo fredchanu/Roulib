@@ -1,0 +1,16 @@
+{
+    "name": "Roulib",
+    "short_name": "Roulib",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#2A9D8F",
+    "theme_color": "#2A9D8F",
+    "icons": [
+      {
+        "src": "roulib-icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

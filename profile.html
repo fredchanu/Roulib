@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche Profil</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="roulib-icon.png" type="image/png">
+  <meta name="theme-color" content="#2A9D8F">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="container">
+    <img id="profile-photo" src="images/default.jpg" alt="Photo du lieu" style="width:100%; border-radius: 12px; margin-bottom: 1rem;">
+    <h1 id="profile-name">Nom</h1>
+    <p id="profile-type">Type : ...</p>
+    <div id="profile-description">Description</div>
+    <div class="info-section">
+      <p id="profile-address"><strong>Adresse :</strong> ...</p>
+      <p id="profile-hours"><strong>Horaires :</strong> du lundi au samedi 9h - 18h</p>
+      <p id="profile-website"><strong>Site web :</strong> <a href="#" target="_blank">...</a></p>
+      <p id="profile-social"><strong>Facebook :</strong> <a href="#" target="_blank">...</a></p>
+    </div>
+    <a href="#" class="btn" id="btn-appointment">Prendre rendez-vous</a>
+    <a href="carte.html" class="btn secondary">Retour à la carte</a>
+  </div>
+  <script src="profile.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('Service Worker enregistré'))
+        .catch(err => console.error('Erreur Service Worker :', err));
+    }
+  </script>
+  
+</body>
+</html>

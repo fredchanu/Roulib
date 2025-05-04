@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Intercycle Flers",
+    "type": "repair",
+    "coords": [
+      48.7429,
+      -0.5688
+    ],
+    "address": "123 Rue des Vélos, 61100 Flers",
+    "hours": "Lundi - Samedi : 9h - 18h",
+    "website": "https://intercycle-flers.fr",
+    "facebook": "https://facebook.com/intercycleflers",
+    "description": "Bonjour a tous ! Nous sommes Intercycle Flers, un groupe de cyclistes qui partage nos connaissances et nos connaissances !"
+  },
+  {
+    "name": "Sport Vélo 14 Vire",
+    "type": "repair",
+    "coords": [
+      48.8378,
+      -0.8891
+    ],
+    "address": "45 Avenue du Stade, 14500 Vire",
+    "hours": "Lundi - Vendredi : 10h - 19h",
+    "website": "https://sportvelo14.fr",
+    "facebook": "https://facebook.com/sportvelo14",
+    "description": ""
+  },
+  {
+    "name": "Corner Bike Vire",
+    "type": "repair",
+    "coords": [
+      48.8413,
+      -0.8897
+    ],
+    "address": "12 Place de la Gare, 14500 Vire",
+    "hours": "Mardi - Samedi : 9h30 - 18h30",
+    "website": "https://cornerbike-vire.fr",
+    "facebook": "https://facebook.com/cornerbikevire",
+    "description": ""
+  },
+  {
+    "name": "Corner Bike Caen",
+    "type": "repair",
+    "coords": [
+      49.1835,
+      -0.3555
+    ],
+    "address": "98 Rue d'Auge, 14000 Caen",
+    "hours": "Lundi - Samedi : 10h - 18h",
+    "website": "https://cornerbike-caen.fr",
+    "facebook": "https://facebook.com/cornerbikecaen",
+    "description": ""
+  },
+  {
+    "name": "RL Cycle",
+    "type": "repair",
+    "coords": [
+      48.7663,
+      -0.5728
+    ],
+    "address": "Rue de la Liberté, Saint-Georges-des-Groseillers",
+    "hours": "Lundi - Samedi : 9h - 18h",
+    "website": "https://rlcycle.fr",
+    "facebook": "https://facebook.com/rlcycle",
+    "description": "Bonjour, Rodolphe et Thibault ! Nous sommes RL Cycle, un groupe de cyclistes qui partage nos connaissances !"
+  },
+  {
+    "name": "Flers Cyclisme 61",
+    "type": "club",
+    "coords": [
+      48.745,
+      -0.569
+    ],
+    "address": "Stade du Hazé, 61100 Flers",
+    "hours": "Sur rendez-vous",
+    "website": "https://flerscyclisme61.fr",
+    "facebook": "https://facebook.com/flerscyclisme61",
+    "description": ""
+  },
+  {
+    "name": "BMX Club de Flers",
+    "type": "club",
+    "coords": [
+      48.748,
+      -0.5665
+    ],
+    "address": "Piste de BMX, Rue du Champ de Foire, Flers",
+    "hours": "Mercredi & Samedi : 14h - 17h",
+    "website": "https://bmxflers.fr",
+    "facebook": "https://facebook.com/bmxflers",
+    "description": ""
+  },
+  {
+    "name": "Caen BMX",
+    "type": "club",
+    "coords": [
+      49.1855,
+      -0.3642
+    ],
+    "address": "Complexe sportif, 14000 Caen",
+    "hours": "Mardi & Jeudi : 17h30 - 20h",
+    "website": "https://caenbmx.fr",
+    "facebook": "https://facebook.com/caenbmx",
+    "description": ""
+  },
+  {
+    "name": "Moyon Percy Vélo Club",
+    "type": "club",
+    "coords": [
+      48.9878,
+      -1.1492
+    ],
+    "address": "Salle des fêtes, 50860 Moyon-Villages",
+    "hours": "Vendredi : 18h - 20h",
+    "website": "https://moyonpercyvelo.fr",
+    "facebook": "https://facebook.com/moyonpercyvelo",
+    "description": ""
+  },
+  {
+    "name": "Tinchebray Cyclo",
+    "type": "club",
+    "coords": [
+      48.7576,
+      -0.7265
+    ],
+    "address": "Place de la Mairie, 61800 Tinchebray",
+    "hours": "Mardi - Vendredi : 17h - 19h",
+    "website": "https://tinchebray-cyclo.com",
+    "facebook": "https://facebook.com/tinchebraycyclo",
+    "description": "Tinchebray Cyclo est un club de cyclisme qui a pour but de promouvoir le sport cycliste dans la commune de Tinchebray."
+  }
+]
