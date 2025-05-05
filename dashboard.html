@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Pro - Roulib</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="pro-container">
+    <h1>Bienvenue, Pierre Durand</h1>
+    <p class="infos">3 rendez-vous à venir<br>1 demande en attente</p>
+    <div class="actions-top">
+      <button class="btn btn-secondary">Voir mon planning</button>
+      <button class="btn btn-secondary">Modifier ma fiche</button>
+    </div>
+
+    <section class="card">
+      <h2>Demandes de rendez-vous</h2>
+      <table>
+        <thead>
+          <tr><th>Nom</th><th>Date</th><th>Type</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Marie Dupont</td><td>25/4, 10:00</td><td>Réparation</td>
+            <td><button class="btn btn-green">Accepter</button></td>
+          </tr>
+          <tr>
+            <td>Paul Lefevre</td><td>25/4, 14:05</td><td>Réparation</td>
+            <td><button class="btn btn-green">Accepter</button></td>
+          </tr>
+          <tr>
+            <td>Sophie Bernard</td><td>27/4, 09:30</td><td>Entretien</td>
+            <td><button class="btn btn-grey">Refuser</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Planning du jour</h2>
+      <ul class="today-planning">
+        <li>10:00 – Révision complète (Jean Dupont)</li>
+        <li>14:00 – Réglage freins (Alice Martin)</li>
+      </ul>
+    </section>
+    
+
+    <section class="grid-cards">
+      <div class="card">
+        <h2>Mon établissement</h2>
+        <input type="text" value="Cycles Durand">
+        <input type="text" value="123 Rue de la République
+78001 Paris">
+        <input type="text" value="01 23 45 67 89">
+        <input type="text" value="Lun – Ven   9:00 – 18:00">
+        <button class="btn btn-green">Enregistrer</button>
+      </div>
+
+      <div class="card">
+        <h2>Paramètres</h2>
+        <p><a href="#">Changer de mot de passe</a></p>
+        <label><input type="checkbox" checked> Accepter les nouveaux rendez-vous</label><br>
+        <label><input type="checkbox"> Envoi des notifications par e-mail</label>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #F9F9F9;
+  color: #1E1E1E;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #2A9D8F;
+}
+
+.pro-container {
+  max-width: 960px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.infos {
+  margin-bottom: 1rem;
+}
+
+.actions-top {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-green {
+  background-color: #2A9D8F;
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: #21867a;
+}
+
+.btn-grey {
+  background-color: #ccc;
+}
+
+.btn-secondary {
+  background-color: white;
+  border: 2px solid #2A9D8F;
+  color: #2A9D8F;
+}
+
+.btn-secondary:hover {
+  background-color: #2A9D8F;
+  color: white;
+}
+
+.today-planning {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+}
+
+.today-planning li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+}
