@@ -1,5 +1,5 @@
 const map = L.map('map');
-map.setView([48.75, -0.57], 8); // Vue générale sur la Normandie
+map.setView([48.75, -0.57], 8); // Normandie par défaut
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
@@ -19,6 +19,13 @@ const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get("reset") === "1") {
   localStorage.removeItem("roulib_filters");
 }
+
+const queryParam = urlParams.get("query");
+const radiusParam = parseInt(urlParams.get("radius")) || 20;
+const filterParam = urlParams.get("filter") || "all";
+
+const saved = loadFiltersFromStorage();
+const query = queryParam || saved?.ville || '';
 
 const allMarkers = [];
 
@@ -81,21 +88,8 @@ fetch('data.json')
       }
     };
 
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get("reset") === "1") {
-      localStorage.removeItem("roulib_filters");
-    }
-    
-    const queryParam = urlParams.get("query");
-    const radiusParam = parseInt(urlParams.get("radius")) || 20;
-    const filterParam = urlParams.get("filter") || "all";
-    
-    const saved = loadFiltersFromStorage();
-    const query = queryParam || saved?.ville || '';
-    
-
     if (query) {
-      fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
+      fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=1`)
         .then(res => res.json())
         .then(data => {
           if (data && data.length > 0) {
@@ -118,7 +112,7 @@ fetch('data.json')
 
       if (!ville) return;
 
-      fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(ville)}`)
+      fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(ville)}&limit=1`)
         .then(res => res.json())
         .then(data => {
           if (data && data.length > 0) {
@@ -140,7 +134,7 @@ fetch('data.json')
         const ville = document.querySelector('input[name=query]').value.trim();
 
         if (ville) {
-          fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(ville)}`)
+          fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(ville)}&limit=1`)
             .then(res => res.json())
             .then(data => {
               if (data && data.length > 0) {
