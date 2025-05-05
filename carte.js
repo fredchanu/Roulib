@@ -4,11 +4,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.get("reset") === "1") {
-  localStorage.removeItem("roulib_filters");
-}
-v
 function saveFiltersToStorage(ville, rayon, filtre) {
   localStorage.setItem("roulib_filters", JSON.stringify({ ville, rayon, filtre }));
 }
@@ -17,6 +12,11 @@ function loadFiltersFromStorage() {
   const saved = JSON.parse(localStorage.getItem("roulib_filters"));
   if (!saved) return null;
   return saved;
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get("reset") === "1") {
+  localStorage.removeItem("roulib_filters");
 }
 
 const allMarkers = [];
