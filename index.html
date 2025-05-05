@@ -8,8 +8,8 @@
   <link rel="icon" href="roulib-icon.png" type="image/png">
   <meta name="theme-color" content="#2A9D8F">
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
   <style>
     .logo-container {
       display: flex;
@@ -59,7 +59,7 @@
 <body>
   <header>
     <div class="logo-container">
-      <img src="bike-logo.png" alt="Logo vélo" class="bike-logo">
+      <img src="images/bike-logo.png" alt="Logo vélo" class="bike-logo">
       <div class="logo-text">
         <span>R</span><span>O</span><span>U</span><span>L</span><span>I</span><span>B</span>
       </div>
@@ -73,19 +73,19 @@
 
   <div class="tagline">Le vélo en local</div>
   <p style="text-align: center; font-size: 0.95rem; margin-top: 0.5rem;">Tous les pros et clubs autour de vous, en un clic.</p>
-  <img src="illustration-bottom.png" alt="Cycliste Roulib" class="illustration" style="margin-top: 3rem; max-width: 100%; height: auto;" />
+  <img src="images/illustration-bottom.png" alt="Cycliste Roulib" class="illustration" style="margin-top: 3rem; max-width: 100%; height: auto;" />
   
   <nav class="bottom-nav">
     <a href="index.html" class="nav-link">
-      <img src="icon-home.svg" alt="Accueil" class="icon-img">
+      <img src="icon/icon-home.svg" alt="Accueil" class="icon-img">
       <span class="label">Accueil</span>
     </a>
     <a href="carte.html" class="nav-link">
-      <img src="icon-map.svg" alt="Carte" class="icon-img">
+      <img src="icon/icon-map.svg" alt="Carte" class="icon-img">
       <span class="label">Carte</span>
     </a>
     <a href="#" class="nav-link">
-      <img src="icon-profile.svg" alt="Profil" class="icon-img">
+      <img src="icon/icon-profile.svg" alt="Profil" class="icon-img">
       <span class="label">Profil</span>
     </a>
   </nav>
@@ -105,7 +105,7 @@
     });
   
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
+      navigator.serviceWorker.register('/js/service-worker.js')
         .then(reg => console.log('Service Worker enregistré'))
         .catch(err => console.error('Erreur Service Worker :', err));
     }
