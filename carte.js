@@ -1,4 +1,5 @@
-const map = L.map('map').setView([48.75, -0.57], 12);
+const map = L.map('map');
+map.setView([48.75, -0.57], 8); // Vue générale sur la Normandie
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
@@ -37,6 +38,7 @@ fetch('data.json')
     const afficherMarqueursFiltres = (center, rayon, filtre) => {
       const profileContainer = document.querySelector('.profiles');
       profileContainer.innerHTML = '';
+      let bounds = [];
 
       allMarkers.forEach(m => {
         const distance = center ? map.distance(center, m.coords) / 1000 : 0;
@@ -45,16 +47,17 @@ fetch('data.json')
 
         if (dansRayon && typeOK) {
           map.addLayer(m.leaflet);
+          bounds.push(m.coords);
 
           const card = document.createElement('div');
           card.className = 'profile-card';
           card.innerHTML = `
-          <h3>${m.name}</h3>
-          <p>Type : ${m.type === 'repair' ? 'Réparateur' : 'Club'}</p>
-          <div style="display: flex; gap: 0.5rem;">
-            <button class="btn-map">Voir sur carte</button>
-            <button class="btn-fiche">Voir la fiche</button>
-          </div>
+            <h3>${m.name}</h3>
+            <p>Type : ${m.type === 'repair' ? 'Réparateur' : 'Club'}</p>
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="btn-map">Voir sur carte</button>
+              <button class="btn-fiche">Voir la fiche</button>
+            </div>
           `;
           card.querySelector('.btn-map').addEventListener('click', () => {
             map.setView(m.coords, 15);
@@ -72,6 +75,10 @@ fetch('data.json')
       const filler = document.createElement('div');
       filler.style.height = '100px';
       profileContainer.appendChild(filler);
+
+      if (bounds.length > 0) {
+        map.fitBounds(bounds, { padding: [50, 50] });
+      }
     };
 
     const saved = loadFiltersFromStorage();
@@ -86,7 +93,6 @@ fetch('data.json')
           if (data && data.length > 0) {
             const { lat, lon } = data[0];
             const center = [parseFloat(lat), parseFloat(lon)];
-            map.setView(center, 13);
             document.querySelector('input[name=query]').value = query;
             document.querySelector('select[name=radius]').value = radiusParam;
             document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
@@ -110,7 +116,6 @@ fetch('data.json')
           if (data && data.length > 0) {
             const { lat, lon } = data[0];
             const center = [parseFloat(lat), parseFloat(lon)];
-            map.setView(center, 13);
             saveFiltersToStorage(ville, rayon, filtreActif);
             afficherMarqueursFiltres(center, rayon, filtreActif);
           }
@@ -133,7 +138,6 @@ fetch('data.json')
               if (data && data.length > 0) {
                 const { lat, lon } = data[0];
                 const center = [parseFloat(lat), parseFloat(lon)];
-                map.setView(center, 13);
                 saveFiltersToStorage(ville, rayon, type);
                 afficherMarqueursFiltres(center, rayon, type);
               }
