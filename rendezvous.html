@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Prendre rendez-vous</title>
+  <link rel="stylesheet" href="rdv.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="rdv-container">
+    <h1>Réservez votre rendez-vous</h1>
+
+    <label for="prestation-select">Choisissez une prestation :</label>
+    <select id="prestation-select">
+      <option value="">-- Sélectionnez --</option>
+    </select>
+
+    <div id="slots-section" class="hidden">
+      <h2>Choisissez un créneau :</h2>
+      <div id="slots-container"></div>
+    </div>
+
+    <button id="btn-reserver" class="hidden">Réserver ce créneau</button>
+  </main>
+
+  <script src="rdv.js"></script>
+</body>
+</html>

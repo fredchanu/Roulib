@@ -1,0 +1,62 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F9F9F9;
+  color: #1E1E1E;
+  padding: 1rem;
+  margin: 0;
+}
+
+.rdv-container {
+  max-width: 480px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #2A9D8F;
+}
+
+select, button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #2A9D8F;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #21867a;
+}
+
+#slots-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.slot-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #2A9D8F;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.slot-button.selected {
+  background-color: #2A9D8F;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}

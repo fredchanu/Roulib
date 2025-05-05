@@ -1,0 +1,5 @@
+[
+  { "id": 1, "nom": "Révision complète", "durée": 60 },
+  { "id": 2, "nom": "Réparation crevaison", "durée": 30 },
+  { "id": 3, "nom": "Réglage freins", "durée": 20 }
+]
