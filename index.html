@@ -66,7 +66,7 @@
     </div>
   </header>
 
-  <form action="carte.html" method="get" class="search-section">
+<form id="form-accueil" class="search-section">
   <input type="text" name="query" placeholder="Où cherchez-vous ? (ville, code postal...)" required />
   <button type="submit">Rechercher</button>
 </form>
@@ -91,24 +91,26 @@
   </nav>
 
   <script>
-    document.querySelector('.search-form').addEventListener('submit', function(e) {
+    document.getElementById('form-accueil').addEventListener('submit', function(e) {
       e.preventDefault();
-      const ville = e.target.query.value.trim(); // <- input name="query"
-      const rayon = e.target.radius.value;
-      const filtre = 'all'; // ou 'repair', 'club', selon ce que je veux par défaut
+      const ville = e.target.query.value.trim();
+      if (!ville) return;
   
-      if (ville) {
-        window.location.href = `carte.html?query=${encodeURIComponent(ville)}&radius=${rayon}&filter=${filtre}`;
-      }
+      // Réinitialise les filtres si on vient de l'accueil
+      localStorage.removeItem("roulib_filters");
+  
+      const rayon = 20;
+      const filtre = 'all';
+      window.location.href = `carte.html?query=${encodeURIComponent(ville)}&radius=${rayon}&filter=${filtre}`;
     });
   
-    // Service Worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/service-worker.js')
         .then(reg => console.log('Service Worker enregistré'))
         .catch(err => console.error('Erreur Service Worker :', err));
     }
   </script>
+  
   
 </body>
 </html>
