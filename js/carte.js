@@ -81,10 +81,18 @@ fetch('data.json')
       }
     };
 
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("reset") === "1") {
+      localStorage.removeItem("roulib_filters");
+    }
+    
+    const queryParam = urlParams.get("query");
+    const radiusParam = parseInt(urlParams.get("radius")) || 20;
+    const filterParam = urlParams.get("filter") || "all";
+    
     const saved = loadFiltersFromStorage();
-    const query = saved?.ville || '';
-    const radiusParam = parseInt(saved?.rayon) || 20;
-    const filterParam = saved?.filtre || 'all';
+    const query = queryParam || saved?.ville || '';
+    
 
     if (query) {
       fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
