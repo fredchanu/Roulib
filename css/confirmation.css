@@ -1,0 +1,31 @@
+.confirmation-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F9F9F9;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .confirmation-container h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #2A9D8F;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .confirmation-container p {
+    font-family: 'Inter', sans-serif;
+    color: #1E1E1E;
+    font-size: 1rem;
+  }
+  
+  .manual-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #2A9D8F;
+    text-decoration: underline;
+  }
+  
