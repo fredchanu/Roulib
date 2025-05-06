@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil client</title>
+  <link rel="stylesheet" href="css/client.css" />
+</head>
+<body>
+  <header>
+    <h1>Bienvenue client</h1>
+    <div class="profile-icon" onclick="toggleMenu()">👤</div>
+    <div id="menu" class="hidden">
+      <a href="client.html">Mon profil</a>
+      <a href="#" onclick="logout()">Déconnexion</a>
+    </div>
+  </header>
+  <main>
+    <p>Vos réservations apparaîtront ici (simulation).</p>
+    <a href="rendezvous.html" class="btn">Réserver un créneau</a>
+  </main>
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("hidden");
+    }
+    function logout() {
+      localStorage.removeItem("user");
+      window.location.href = "login.html";
+    }
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user || user.type !== "client") {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

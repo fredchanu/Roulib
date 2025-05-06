@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion</title>
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <main class="login-container">
+    <h1>Connexion</h1>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Mot de passe" required />
+      <select id="user-type" required>
+        <option value="">Je suis...</option>
+        <option value="client">Client</option>
+        <option value="pro">Réparateur</option>
+      </select>
+      <button type="submit">Se connecter</button>
+    </form>
+    <p id="error-message" class="hidden">Identifiants incorrects</p>
+  </main>
+  <script src="js/login.js"></script>
+</body>
+</html>

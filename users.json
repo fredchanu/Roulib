@@ -1,0 +1,13 @@
+[
+    {
+      "type": "client",
+      "email": "client@test.com",
+      "password": "1234"
+    },
+    {
+      "type": "pro",
+      "email": "pro@velo.com",
+      "password": "abcd"
+    }
+  ]
+  
