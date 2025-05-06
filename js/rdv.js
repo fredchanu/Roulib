@@ -50,10 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
         slotsSection.classList.remove("hidden");
       });
   });
-
-  reserverBtn.addEventListener("click", () => {
-    if (selectedSlot) {
-      alert(`Rendez-vous réservé pour le ${selectedSlot.date} à ${selectedSlot.heure}`);
-    }
-  });
 });
+
+document.getElementById("confirm-booking").addEventListener("click", function () {
+  document.getElementById("overlay").classList.remove("hidden");
+
+  setTimeout(() => {
+    window.location.href = "confirmation.html";
+  }, 2000);
+});
+
