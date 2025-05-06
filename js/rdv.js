@@ -50,13 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
         slotsSection.classList.remove("hidden");
       });
   });
-});
-
 document.getElementById("confirm-booking").addEventListener("click", function () {
   document.getElementById("overlay").classList.remove("overlay-hidden");
-
+  
   setTimeout(() => {
     window.location.href = "confirmation.html";
   }, 2000);
+});
 });
 
