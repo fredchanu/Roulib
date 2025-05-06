@@ -49,6 +49,8 @@ button:hover {
   border: 1px solid #2A9D8F;
   border-radius: 4px;
   background-color: white;
+  color: #2A9D8F;
+  font-weight: bold;
   cursor: pointer;
 }
 
