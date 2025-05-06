@@ -13,7 +13,7 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
           if (user.type === "client") {
             window.location.href = "client.html";
           } else if (user.type === "pro") {
-            window.location.href = "pro-dashboard.html";
+            window.location.href = "dashboard.html";
           }
         } else {
           document.getElementById("error-message").classList.remove("hidden");
