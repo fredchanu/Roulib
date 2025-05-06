@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById("confirm-booking").addEventListener("click", function () {
-  document.getElementById("overlay").classList.remove("hidden");
+  document.getElementById("overlay").classList.remove("overlay-hidden");
 
   setTimeout(() => {
     window.location.href = "confirmation.html";

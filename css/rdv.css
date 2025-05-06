@@ -72,7 +72,7 @@ button:hover {
   z-index: 1000;
 }
 
-.hidden {
+.overlay-hidden {
   display: none;
 }
 
