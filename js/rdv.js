@@ -59,7 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!selectedSlot) return;
 
       const overlay = document.getElementById("overlay");
-      if (overlay) overlay.classList.remove("overlay-hidden");
+      if (overlay) {
+        console.log("CLIC détecté → overlay affiché");
+        overlay.classList.remove("overlay-hidden");
+      }
+      
 
       setTimeout(() => {
         window.location.href = "confirmation.html";
